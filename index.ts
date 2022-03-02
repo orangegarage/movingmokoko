@@ -8,5 +8,4 @@ const intents = new Discord.Intents(3608);
 //  * @property {IntentsResolvable} intents Intents to enable for this connection
 const client = new Discord.Client({ intents });
 
-
 client.login(token); //login bot using token
