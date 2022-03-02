@@ -3,9 +3,7 @@
         {
             "name": "Lucas",
             "location": "Yudia",
-            "appearTime": [
-                1, 4, 5, 7, 8, 11, 13, 16, 17, 19, 20, 23
-            ],
+            "group": 2,
             "items": [
                 "Yudia Spellbook",
                 "Yudia Natural Salt",
@@ -18,9 +16,7 @@
         {
             "name": "Morris",
             "location": "East Luterra",
-            "appearTime": [
-                1, 4, 5, 7, 8, 11, 13, 16, 17, 19, 20, 23
-            ],
+            "group": 2,
             "items": [
                 "Azenaporium Brooch",
                 "Dyorika Straw Hat",
@@ -36,9 +32,7 @@
         {
             "name": "Mac",
             "location": "Anikka",
-            "appearTime": [
-                1, 4, 5, 7, 8, 11, 13, 16, 17, 19, 20, 23
-            ],
+            "group": 2,
             "items": [
                 "Tournament Entrance Stamp",
                 "Angler's Fishing Pole",
@@ -51,9 +45,7 @@
         {
             "name": "Jeffrey",
             "location": "Shushire",
-            "appearTime": [
-                1, 4, 5, 7, 8, 11, 13, 16, 17, 19, 20, 23
-            ],
+            "group": 2,
             "items": [
                 "Shimmering Essence",
                 "Sirius's Holy Book",
@@ -66,9 +58,7 @@
         {
             "name": "Dorella",
             "location": "Feiton",
-            "appearTime": [
-                1, 4, 5, 7, 8, 11, 13, 16, 17, 19, 20, 23
-            ],
+            "group": 2,
             "items": [
                 "Dessicated Wooden Statue",
                 "Broken Dagger",
@@ -83,9 +73,7 @@
         {
             "name": "Malone",
             "location": "West Luterra",
-            "appearTime": [
-                0, 2, 5, 6, 8, 9, 12, 14, 17, 18, 20, 21
-            ],
+            "group": 3,
             "items": [
                 "Black Rose",
                 "Lakebar Tomato Juice",
@@ -100,9 +88,7 @@
         {
             "name": "Burt",
             "location": "East Luterra",
-            "appearTime": [
-                0, 2, 5, 6, 8, 9, 12, 14, 17, 18, 20, 21
-            ],
+            "group": 3,
             "items": [
                 "Azenaporium Brooch",
                 "Dyorika Straw Hat",
@@ -117,9 +103,7 @@
         {
             "name": "Oliver",
             "location": "Tortoyk",
-            "appearTime": [
-                0, 2, 5, 6, 8, 9, 12, 14, 17, 18, 20, 21
-            ],
+            "group": 3,
             "items": [
                 "Mokoko Carrot",
                 "Oversize Ladybug Doll",
@@ -133,9 +117,7 @@
         {
             "name": "Nox",
             "location": "Arthetine",
-            "appearTime": [
-                0, 2, 5, 6, 8, 9, 12, 14, 17, 18, 20, 21
-            ],
+            "group": 3,
             "items": [
                 "Fine Gramophone",
                 "Energy X7 Capsule",
@@ -148,9 +130,7 @@
         {
             "name": "Aricer",
             "location": "Rohendel",
-            "appearTime": [
-                0, 2, 5, 6, 8, 9, 12, 14, 17, 18, 20, 21
-            ],
+            "group": 3,
             "items": [
                 "Danube's Earrings",
                 "Elemental's Feather",
@@ -165,9 +145,7 @@
         {
             "name": "Rayni",
             "location": "Punika",
-            "appearTime": [
-                0, 2, 5, 6, 8, 9, 12, 14, 17, 18, 20, 21
-            ],
+            "group": 3,
             "items": [
                 "Piñata Crafting Set",
                 "Hollowfruit",
@@ -183,9 +161,7 @@
         {
             "name": "Ben",
             "location": "Rethramis",
-            "appearTime": [
-                0, 3, 4, 6, 7, 10, 12, 15, 16, 18, 19, 22
-            ],
+            "group": 1,
             "items": [
                 "Fancier Bouquet",
                 "Prideholme Potato",
@@ -199,9 +175,7 @@
         {
             "name": "Peter",
             "location": "North Vern",
-            "appearTime": [
-                0, 3, 4, 6, 7, 10, 12, 15, 16, 18, 19, 22
-            ],
+            "group": 1,
             "items": [
                 "Exquisite Music Box",
                 "Goblin Yam",
@@ -217,9 +191,7 @@
         {
             "name": "Laitir",
             "location": "Yorn",
-            "appearTime": [
-                0, 3, 4, 6, 7, 10, 12, 15, 16, 18, 19, 22
-            ],
+            "group": 1,
             "items": [
                 "Piyer'ss Secret Textbook",
                 "Fargar's Beer",
