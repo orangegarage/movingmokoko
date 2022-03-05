@@ -1,6 +1,6 @@
 # movingmokoko
 
-![mokoko](https://user-images.githubusercontent.com/28700018/156867249-73777af6-30e2-42e4-87cb-8355eb55a0f3.png | width = 500)
+<img src = "https://user-images.githubusercontent.com/28700018/156867249-73777af6-30e2-42e4-87cb-8355eb55a0f3.png" width = "300"/>
 
 
 bot to track wandering merchants in Arkesia
