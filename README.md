@@ -1,6 +1,7 @@
 # movingmokoko
 
-![mokoko](https://github.com/orangegarage/movingmokoko/blob/main/mokoko.png | height = 300)
+![mokoko](https://user-images.githubusercontent.com/28700018/156867249-73777af6-30e2-42e4-87cb-8355eb55a0f3.png | width = 500)
+
 
 bot to track wandering merchants in Arkesia
 
