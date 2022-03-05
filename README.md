@@ -1,6 +1,6 @@
 # movingmokoko
 
-<a href = "https://github.com/orangegarage/movingmokoko/blob/main/mokoko.png?raw=true " height = "300"> </a>
+<a href = "mokoko.png" height = "300"> </a>
 
 bot to track wandering merchants in Arkesia
 
