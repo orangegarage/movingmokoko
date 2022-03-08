@@ -31,7 +31,7 @@ const client = new Discord.Client({ intents });
 
 let CronJob = require('cron').CronJob;
 
-function formattedMessage(systime: Date): Array<string>
+function formattedMessage(systime: Date): string //should return string and job should just output formatted message
 {
     let returnTime = systime.toLocaleTimeString('en-US'); //make sure time is in consistent format
     //get substring from start until the first ':' character.
@@ -40,12 +40,18 @@ function formattedMessage(systime: Date): Array<string>
     console.log("what's the hour?: " + returnHour);
     if(groupByTime.has(returnHour))
     {
+        let messageString: string = "Merchants online! Groups: ";
         console.log("what's the groups?: " + groupByTime.get(returnHour));
-        return groupByTime.get(returnHour)!;
+        let groupArray: Array<string> = groupByTime.get(returnHour);
+        groupArray.forEach(function (value){
+            let fetchMerchantFromGroup: string = value;
+            messageString += fetchMerchantFromGroup;
+        });
+        return messageString;
     }
-    else{
+    else{ 
         console.log("hour not found");
-        return [] as string[];
+        return "";
     }
 }
 
@@ -57,16 +63,10 @@ let job = new CronJob('0 * * * * *', function() {
 
     //wonder if there is a way to get channel Id by name, if it doesn't exist, create channel with name and pull channelId from there.
     //probably is. but for now, into env you go
-    let messageToSend: string = "Merchants online! Groups: ";
     //define channel as textchannel through calling TextChannel
     let channelId: string = process.env.CHANNEL_ID!;
     const messageChannel = client.channels.cache.get(channelId) as Discord.TextChannel;
-    let groupArray: Array<string> = formattedMessage(new Date());
-    
-    groupArray.forEach(function (value){
-        messageToSend = messageToSend + (value);
-    });
-    messageChannel.send(messageToSend); 
+    messageChannel.send(formattedMessage(new Date())); 
 }, null, true);
 job.start();
 
