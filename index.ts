@@ -4,8 +4,11 @@ import * as dotenv from "dotenv";
 dotenv.config({ path: __dirname + '/key.env'})
 const token = process.env.CLIENT_TOKEN;
 
+const intents = new Discord.Intents();
+intents.add(Discord.Intents.FLAGS.GUILD_MEMBERS, Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.GUILD_MESSAGE_TYPING, Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS);
+//  * @property {IntentsResolvable} intents Intents to enable for this connection
+const client = new Discord.Client({ intents });
 //Groups rotate AM and PM, don't worry about minute because it is always going to be at the 30. cronjob will take care of that
-
 //groupByTime: hour, group. cronjob will handle the minute alignment
 let groupByTime: Map<string, string[]> = new Map([
     ["1", ["group2"]],
@@ -22,11 +25,6 @@ let groupByTime: Map<string, string[]> = new Map([
     ["12",["group1", "group3"]],
 ]);
 
-const intents = new Discord.Intents();
-intents.add(Discord.Intents.FLAGS.GUILD_MEMBERS, Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.GUILD_MESSAGE_TYPING, Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS);
-//  * @property {IntentsResolvable} intents Intents to enable for this connection
-const client = new Discord.Client({ intents });
-
 let CronJob = require('cron').CronJob;
 
 function formattedMessage(systime: Date): string //should return string and job should just output formatted message
@@ -38,12 +36,13 @@ function formattedMessage(systime: Date): string //should return string and job 
     console.log("what's the hour?: " + returnHour);
     if(groupByTime.has(returnHour))
     {
-        let messageString: string = "Merchants online! Groups: ";
+        let messageString: string = "mokoko powered init\n";
         console.log("what's the groups?: " + groupByTime.get(returnHour));
         let groupArray: Array<string> = groupByTime.get(returnHour)!;
         groupArray.forEach(function (value){
-            let fetchMerchantFromGroup: string = value;
-            messageString += fetchMerchantFromGroup;
+            messageString += "@" + value + " Merchants online!\n" //<@&role_id>
+            let fetchMerchantFromGroup: string = ""; //for now just group
+            //if group blah print this if group blah print that
         });
         return messageString;
     }
@@ -58,7 +57,7 @@ function formattedMessage(systime: Date): string //should return string and job 
 //wonder if there is a way to get channel Id by name, if it doesn't exist, create channel with name and pull channelId from there.
 //probably is. but for now, into env you go
 //define channel as textchannel through calling TextChannel
-
+//let member = Discord.GuildMember;
 let channelId: string = process.env.CHANNEL_ID!;
 let messageChannel = null;
 let job = new CronJob('0 * * * * *', function() {
@@ -68,6 +67,24 @@ let job = new CronJob('0 * * * * *', function() {
 }, null, true);
 job.start();
 
+client.on('messageReactionAdd', (reaction, user) =>{
+    if(reaction.emoji.name === "1️⃣")
+        console.log('reacted1');
+    else if(reaction.emoji.name === "2️⃣")
+        console.log('reacted2');
+    else if(reaction.emoji.name === "3️⃣")
+        console.log('reacted3');
+});
+//this will trigger on every message, how to make it on specific message?
+
+client.on('messageReactionRemove', (reaction, user) =>{
+    if(reaction.emoji.name === "1️⃣")
+        console.log('redacted1');
+    else if(reaction.emoji.name === "2️⃣")
+        console.log('redacted2');
+    else if(reaction.emoji.name === "3️⃣")
+        console.log('redacted3');
+});
 
 client.on('ready', () => {
     let introductionMessage: string = "Hello, I'm a moving mokoko. Traveling merchants are divided into 3 groups.\n\n"
