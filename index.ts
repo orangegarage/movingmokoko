@@ -5,10 +5,8 @@ dotenv.config({ path: __dirname + '/key.env'})
 const token = process.env.CLIENT_TOKEN;
 
 //Groups rotate AM and PM, don't worry about minute because it is always going to be at the 30. cronjob will take care of that
-const group1: Array<string> = ["3", "4", "6", "7", "10", "12"];
-const group2: Array<string> = ["1", "4", "5", "7", "8", "11"];
-const group3: Array<string> = ["2", "5", "6", "8", "9", "12"];
-//don't do this ^, make a hashmap with time as key and groups as value
+
+//groupByTime: hour, group. cronjob will handle the minute alignment
 let groupByTime: Map<string, string[]> = new Map([
     ["1", ["group2"]],
     ["2",["group3"]],
@@ -42,7 +40,7 @@ function formattedMessage(systime: Date): string //should return string and job 
     {
         let messageString: string = "Merchants online! Groups: ";
         console.log("what's the groups?: " + groupByTime.get(returnHour));
-        let groupArray: Array<string> = groupByTime.get(returnHour);
+        let groupArray: Array<string> = groupByTime.get(returnHour)!;
         groupArray.forEach(function (value){
             let fetchMerchantFromGroup: string = value;
             messageString += fetchMerchantFromGroup;
@@ -56,23 +54,32 @@ function formattedMessage(systime: Date): string //should return string and job 
 }
 
 //cron will run every minute just for sanity checking
-// https://crontab.guru/#30_*_*_*_*
+// https://crontab.guru/#30_*_*_*_*    
+//wonder if there is a way to get channel Id by name, if it doesn't exist, create channel with name and pull channelId from there.
+//probably is. but for now, into env you go
+//define channel as textchannel through calling TextChannel
 
+let channelId: string = process.env.CHANNEL_ID!;
+let messageChannel = null;
 let job = new CronJob('0 * * * * *', function() {
     console.log('sanity check');
-
-    //wonder if there is a way to get channel Id by name, if it doesn't exist, create channel with name and pull channelId from there.
-    //probably is. but for now, into env you go
-    //define channel as textchannel through calling TextChannel
-    let channelId: string = process.env.CHANNEL_ID!;
-    const messageChannel = client.channels.cache.get(channelId) as Discord.TextChannel;
+    messageChannel = client.channels.cache.get(channelId) as Discord.TextChannel;
     messageChannel.send(formattedMessage(new Date())); 
 }, null, true);
 job.start();
 
-console.log(group1[0] + " " + group2[0] + " " + group3[0]);
 
-client.on('ready', () => console.log("ready to go"));
+client.on('ready', () => {
+    let introductionMessage: string = "Hello, I'm a moving mokoko. Traveling merchants are divided into 3 groups.\n\n"
+    + "Group 1: Ben (Rethramis) | Peter (North Vern) | Laitir (Yorn)\n"
+    + "Group 2: Lucas (Yudia) | Morris (East Luterra) | Mac (Anikka) | Jeffery (Shushire) | Dorella (Feiton)\n"
+    + "Group 3: Malone (West Luterra) | Burt (East Luterra) | Oliver (Totoroyk) | Nox (Arthetine) | Aricer (Rohendel) | Rayni (Punika)\n\n"
+    + "If you are searching for the Seria card (Lostwind Cliff set), only Burt (group 3) has a chance of selling it.\n\n"
+    + "React with :one: / :two: / :three: below and I will ping you when it is time for the respective group to spawn!";
+    console.log("ready to go")
+    messageChannel = client.channels.cache.get(channelId) as Discord.TextChannel;
+    messageChannel.send(introductionMessage);
+});
 
 client.on('messageCreate', msg => {
     if (msg.content === 'mokoko')

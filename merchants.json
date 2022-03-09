@@ -3,6 +3,7 @@
         {
             "name": "Lucas",
             "location": "Yudia",
+            "field": [],
             "group": 2,
             "items": [
                 "Yudia Spellbook",
@@ -16,6 +17,7 @@
         {
             "name": "Morris",
             "location": "East Luterra",
+            "field": [],
             "group": 2,
             "items": [
                 "Azenaporium Brooch",
@@ -32,6 +34,12 @@
         {
             "name": "Mac",
             "location": "Anikka",
+            "field": [
+                "Delphi Township"
+                ,"Rattan Hill"
+                ,"Melody Forest"
+                ,"Prisma Valley"
+                ,"Twilight Mist" ],
             "group": 2,
             "items": [
                 "Tournament Entrance Stamp",
@@ -45,6 +53,7 @@
         {
             "name": "Jeffrey",
             "location": "Shushire",
+            "field": [],
             "group": 2,
             "items": [
                 "Shimmering Essence",
@@ -58,6 +67,7 @@
         {
             "name": "Dorella",
             "location": "Feiton",
+            "field": [],
             "group": 2,
             "items": [
                 "Dessicated Wooden Statue",
@@ -73,6 +83,7 @@
         {
             "name": "Malone",
             "location": "West Luterra",
+            "field": [],
             "group": 3,
             "items": [
                 "Black Rose",
@@ -88,6 +99,7 @@
         {
             "name": "Burt",
             "location": "East Luterra",
+            "field": [],
             "group": 3,
             "items": [
                 "Azenaporium Brooch",
@@ -103,6 +115,7 @@
         {
             "name": "Oliver",
             "location": "Tortoyk",
+            "field": [],
             "group": 3,
             "items": [
                 "Mokoko Carrot",
@@ -117,6 +130,7 @@
         {
             "name": "Nox",
             "location": "Arthetine",
+            "field": [],
             "group": 3,
             "items": [
                 "Fine Gramophone",
@@ -130,6 +144,7 @@
         {
             "name": "Aricer",
             "location": "Rohendel",
+            "field": [],
             "group": 3,
             "items": [
                 "Danube's Earrings",
@@ -145,6 +160,7 @@
         {
             "name": "Rayni",
             "location": "Punika",
+            "field": [],
             "group": 3,
             "items": [
                 "Piñata Crafting Set",
@@ -161,6 +177,7 @@
         {
             "name": "Ben",
             "location": "Rethramis",
+            "field": [],
             "group": 1,
             "items": [
                 "Fancier Bouquet",
@@ -175,6 +192,7 @@
         {
             "name": "Peter",
             "location": "North Vern",
+            "field": [],
             "group": 1,
             "items": [
                 "Exquisite Music Box",
@@ -191,6 +209,7 @@
         {
             "name": "Laitir",
             "location": "Yorn",
+            "field": [],
             "group": 1,
             "items": [
                 "Piyer'ss Secret Textbook",
