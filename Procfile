@@ -1,1 +1,1 @@
-worker: tsc index.ts
+worker: ts-node index.ts
