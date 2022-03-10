@@ -1,0 +1,1 @@
+worker: tsc index.ts
