@@ -3,7 +3,10 @@
         {
             "name": "Lucas",
             "location": "Yudia",
-            "field": [],
+            "field": [
+                "Ozhorn Hill - Ozhorn Assembly Area"
+                ,"Saland Hill- Salt Works"
+            ],
             "group": 2,
             "items": [
                 "Yudia Spellbook",
@@ -17,7 +20,11 @@
         {
             "name": "Morris",
             "location": "East Luterra",
-            "field": [],
+            "field": [
+                "Dyorika Plains - Bishu Manor"
+                ,"Sunbright Hill - Pumpkin Farm"
+                ,"Flowering Orchard - Deier Village"
+            ],
             "group": 2,
             "items": [
                 "Azenaporium Brooch",
@@ -35,11 +42,12 @@
             "name": "Mac",
             "location": "Anikka",
             "field": [
-                "Delphi Township"
-                ,"Rattan Hill"
-                ,"Melody Forest"
-                ,"Prisma Valley"
-                ,"Twilight Mist" ],
+                "Delphi Township - Market District"
+                ,"Rattan Hill - Cold Haunted House"
+                ,"Melody Forest - Ascetic Temple"
+                ,"Prisma Valley - Beacon Point"
+                ,"Twilight Mist - Cloud Valley"
+            ],
             "group": 2,
             "items": [
                 "Tournament Entrance Stamp",
@@ -53,7 +61,13 @@
         {
             "name": "Jeffrey",
             "location": "Shushire",
-            "field": [],
+            "field": [
+                "Icewing Cliff - Gray Wolves"
+                ,"Lake Eternity - Lakeside Fishing Spot"
+                ,"Frozen Sea - Shadow Market"
+                ,"Iceblood Plateau - Graymoon Camp"
+                ,"Bitterwind Hill - Bitterwind Hill Post"
+            ],
             "group": 2,
             "items": [
                 "Shimmering Essence",
@@ -67,7 +81,9 @@
         {
             "name": "Dorella",
             "location": "Feiton",
-            "field": [],
+            "field": [
+                "Kalaja Village - Portal Statue"
+            ],
             "group": 2,
             "items": [
                 "Dessicated Wooden Statue",
@@ -83,7 +99,13 @@
         {
             "name": "Malone",
             "location": "West Luterra",
-            "field": [],
+            "field": [
+                "Battlebound Plains - Front Outpost"
+                ,"Bilbrin Forest - Spring Refugee Outpost"
+                ,"Medrick Monastary - Medrick Monastary"
+                ,"Lakebar- Lakebar Village"
+                ,"Mount Zagoras - Zagoras Fortress"
+            ],
             "group": 3,
             "items": [
                 "Black Rose",
@@ -99,7 +121,12 @@
         {
             "name": "Burt",
             "location": "East Luterra",
-            "field": [],
+            "field": [
+                "Blackrose Chapel - Styxia Village"
+                ,"Borea's Domain - Borea Castle"
+                ,"Croconys Seashore - Croconys Fishing Village"
+                ,"Leyar Terrace - Tamir Village"
+            ],
             "group": 3,
             "items": [
                 "Azenaporium Brooch",
@@ -115,7 +142,12 @@
         {
             "name": "Oliver",
             "location": "Tortoyk",
-            "field": [],
+            "field": [
+                "Seaswept Woods - Cashew Forest"
+                ,"Skyreach Steppe - Thumb Shores"
+                ,"Sweetwater Forest - Sweetwater Farm"
+                ,"Forest of Giants - Tortoyk's Arm"
+            ],
             "group": 3,
             "items": [
                 "Mokoko Carrot",
@@ -130,7 +162,14 @@
         {
             "name": "Nox",
             "location": "Arthetine",
-            "field": [],
+            "field": [
+                "Riza Falls - Verdantier Observatory"
+                ,"Totrich - Clockwork Square"
+                ,"Arid Path - Lupen Port"
+                ,"Scraplands - Relay Guard Post"
+                ,"Nebelhorn - Nebelhorn Lab"
+                ,"Windbringer Hills - Guard Post"
+            ],
             "group": 3,
             "items": [
                 "Fine Gramophone",
@@ -144,7 +183,13 @@
         {
             "name": "Aricer",
             "location": "Rohendel",
-            "field": [],
+            "field": [
+                "Lake Shiverwave - Fairy Settlement"
+                ,"Xeneela Ruins - Contaminated Village"
+                ,"Breezesome Brae - Dandelion Hill"
+                ,"nGlass Lotus Lake - Foehn Plains"
+                ,"Elzowin's Shade - West Knurlroot Forest"
+            ],
             "group": 3,
             "items": [
                 "Danube's Earrings",
@@ -160,7 +205,12 @@
         {
             "name": "Rayni",
             "location": "Punika",
-            "field": [],
+            "field": [
+                "Tika Tika Colony - Militia Residence"
+                ,"Tideshelf Path - Mellow Beach"
+                ,"Secret Forest - Forlorn Swamps"
+                ,"Starsand Beach - Starlight Shelter"
+            ],
             "group": 3,
             "items": [
                 "Piñata Crafting Set",
@@ -177,7 +227,11 @@
         {
             "name": "Ben",
             "location": "Rethramis",
-            "field": [],
+            "field": [
+                "Loghill - Loghill Outpost"
+                ,"Ankumo Mountain - Border Watch"
+                ,"Rethramis Border - Regria Monastary"
+            ],
             "group": 1,
             "items": [
                 "Fancier Bouquet",
@@ -192,7 +246,13 @@
         {
             "name": "Peter",
             "location": "North Vern",
-            "field": [],
+            "field": [
+                "Port Krona - Downtown Port Krona"
+                ,"Parna Forest - Parna's Sanctum"
+                ,"Fesnar Highland = Barrier Trail"
+                ,"Vernese Forest - Ranger HQ"
+                ,"Balankar Mountains - Lighthouse Village"
+            ],
             "group": 1,
             "items": [
                 "Exquisite Music Box",
@@ -209,7 +269,13 @@
         {
             "name": "Laitir",
             "location": "Yorn",
-            "field": [],
+            "field": [
+                "Yorn's Cradle - Glory Trade Plaza"
+                ,"Unfinished Garden - Youthful Garden"
+                ,"Black Anvil Mine - Sleepy Shelter"
+                ,"Iron Hammer Mine - Radiant Gold Mine"
+                ,"Hall of Promise - Library Obscure"
+            ],
             "group": 1,
             "items": [
                 "Piyer'ss Secret Textbook",

@@ -3,6 +3,9 @@ import * as dotenv from "dotenv";
 
 dotenv.config({ path: __dirname + '/key.env'})
 const token = process.env.CLIENT_TOKEN;
+const roleGroup1 = process.env.GROUP1_ID!;
+const roleGroup2 = process.env.GROUP2_ID!;
+const roleGroup3 = process.env.GROUP3_ID!;
 
 const intents = new Discord.Intents();
 intents.add(Discord.Intents.FLAGS.GUILD_MEMBERS, Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.GUILD_MESSAGE_TYPING, Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS);
@@ -36,12 +39,55 @@ function formattedMessage(systime: Date): string //should return string and job 
     console.log("what's the hour?: " + returnHour);
     if(groupByTime.has(returnHour))
     {
-        let messageString: string = "mokoko powered init\n";
+        let messageString: string = "Naruni-powered merchant search!\n";
         console.log("what's the groups?: " + groupByTime.get(returnHour));
         let groupArray: Array<string> = groupByTime.get(returnHour)!;
         groupArray.forEach(function (value){
-            messageString += "@" + value + " Merchants online!\n" //<@&role_id>
-            let fetchMerchantFromGroup: string = ""; //for now just group
+            messageString += "Merchants online!\n" //<@&role_id>
+            if(value === "group1")
+            {
+                messageString += "<@&" + roleGroup1 + "> Merchants: \n"
+                + "**[Ben (Rethramis)]**:\n"
+                + "Loghill - Loghill Outpost\nAnkumo Mountain - Border Watch\nRethramis Border - Regria Monastary\n"
+                + "**[Peter (North Vern)]**:\n"
+                + "Port Krona - Downtown Port Krona\nParna Forest - Parna's Sanctum\nFesnar Highland - Barrier Trail\nVernese Forest - Ranger HQ\nBalankar Mountains - Lighthouse Village\n"
+                + "**[Laitir (Yorn)]**:\n"
+                + "Yorn's Cradle - Glory Trade Plaza\nUnfinished Garden - Youthful Garden\nBlack Anvil Mine - Sleepy Shelter\nIron Hammer Mine - Radiant Gold Mine\nHall of Promise - Library Obscure\n"
+                + "\n"
+            }
+            else if(value === "group2")
+            {
+                messageString += "<@&" + roleGroup2 + "> Merchants: \n"
+                + "**[Lucas (Yudia)]**:\n"
+                + "Ozhorn Hill - Ozhorn Assembly Area\nSaland Hill- Salt Works\n"
+                + "**[Morris (East Luterra)]**:\n"
+                + "Dyorika Plains - Bishu Manor\nSunbright Hill - Pumpkin Farm\nFlowering Orchard - Deier Village\n"
+                + "**[Mac (Anikka)]**:\n"
+                + "Delphi Township - Market District\nRattan Hill - Cold Haunted House\nMelody Forest - Ascetic Temple\nPrisma Valley - Beacon Point\nTwilight Mist - Cloud Valley\n"
+                + "**[Jeffrey (Shushire)]**:\n"
+                + "Icewing Cliff - Gray Wolves\nLake Eternity - Lakeside Fishing Spot\nFrozen Sea - Shadow Market\nIceblood Plateau - Graymoon Camp\nBitterwind Hill - Bitterwind Hill Post\n"
+                + "**[Dorella (Feiton)]**:\n"
+                + "Kalaja Village - Portal Statue\n"
+                + "\n"
+            }
+            else if(value === "group3")
+            {
+                messageString += "<@&" + roleGroup3 + "> Merchants: \n"
+                + "**[Malone (West Luterra)]**:\n"
+                + "Battlebound Plains - Front Outpost\nBilbrin Forest - Spring Refugee Outpost\nMedrick Monastary - Medrick Monastary\nLakebar- Lakebar Village\nMount Zagoras - Zagoras Fortress\n"
+                + "**[Burt (East Luterra)]**:\n"
+                + "Blackrose Chapel - Styxia Village\nBorea's Domain - Borea Castle\nCroconys Seashore - Croconys Fishing Village\nLeyar Terrace - Tamir Village\n"
+                + "**[Oliver (Tortoyk)]**:\n"
+                + "Seaswept Woods - Cashew Forest\nSkyreach Steppe - Thumb Shores\nSweetwater Forest - Sweetwater Farm\nForest of Giants - Tortoyk's Arm\n"
+                + "**[Nox (Arthetine)]**:\n"
+                + "Riza Falls - Verdantier Observatory\nTotrich - Clockwork Square\nArid Path - Lupen Port\nScraplands - Relay Guard Post\nNebelhorn - Nebelhorn Lab\nWindbringer Hills - Guard Post\n"
+                + "**[Aricer (Rohendel)]**:\n"
+                + "Lake Shiverwave - Fairy Settlement\nXeneela Ruins - Contaminated Village\nBreezesome Brae - Dandelion Hill\nGlass Lotus Lake - Foehn Plains\nElzowin's Shade - West Knurlroot Forest\n"
+                + "**[Rayni (Punika)]**:\n"
+                + "Tika Tika Colony - Militia Residence\nTideshelf Path - Mellow Beach\nSecret Forest - Forlorn Swamps\nStarsand Beach - Starlight Shelter\n"
+                + "\n"
+            }
+            //function fetchMerchantFromGroup: string = ""; //for now just group
             //if group blah print this if group blah print that
         });
         return messageString;
@@ -58,43 +104,61 @@ function formattedMessage(systime: Date): string //should return string and job 
 //probably is. but for now, into env you go
 //define channel as textchannel through calling TextChannel
 //let member = Discord.GuildMember;
-let channelId: string = process.env.CHANNEL_ID!;
+let botChannelId: string = process.env.BOTCHANNEL_ID!;
 let messageChannel = null;
-let job = new CronJob('0 * * * * *', function() {
-    console.log('sanity check');
-    messageChannel = client.channels.cache.get(channelId) as Discord.TextChannel;
+let job = new CronJob('0 30 * * * *', function() {
+    messageChannel = client.channels.cache.get(botChannelId) as Discord.TextChannel;
     messageChannel.send(formattedMessage(new Date())); 
 }, null, true);
 job.start();
 
 client.on('messageReactionAdd', (reaction, user) =>{
-    if(reaction.emoji.name === "1️⃣")
-        console.log('reacted1');
-    else if(reaction.emoji.name === "2️⃣")
-        console.log('reacted2');
-    else if(reaction.emoji.name === "3️⃣")
-        console.log('reacted3');
+    let authorName = reaction.message.author!.username!;
+    
+    if(authorName === "Moving Mokoko")
+    {
+        if(reaction.emoji.name === "1️⃣")
+        {
+            reaction.message.guild!.members.cache.get(user.id)!.roles.add(roleGroup1);
+        }
+        else if(reaction.emoji.name === "2️⃣")
+        {
+            reaction.message.guild!.members.cache.get(user.id)!.roles.add(roleGroup2);
+        }
+        else if(reaction.emoji.name === "3️⃣")
+        {
+            reaction.message.guild!.members.cache.get(user.id)!.roles.add(roleGroup3);
+        }
+    }
+
 });
 //this will trigger on every message, how to make it on specific message?
 
 client.on('messageReactionRemove', (reaction, user) =>{
-    if(reaction.emoji.name === "1️⃣")
-        console.log('redacted1');
-    else if(reaction.emoji.name === "2️⃣")
-        console.log('redacted2');
-    else if(reaction.emoji.name === "3️⃣")
-        console.log('redacted3');
+    let authorName = reaction.message.author!.username;
+    if(authorName === "Moving Mokoko")
+    {
+        if(reaction.emoji.name === "1️⃣")
+            reaction.message.guild!.members.cache.get(user.id)!.roles.remove(roleGroup1);
+        else if(reaction.emoji.name === "2️⃣")
+            reaction.message.guild!.members.cache.get(user.id)!.roles.remove(roleGroup2);
+        else if(reaction.emoji.name === "3️⃣")
+            reaction.message.guild!.members.cache.get(user.id)!.roles.remove(roleGroup3);
+    }
+    //does this mean anyone with username Moving Mokoko can trigger?
 });
 
+
+let introductionChannelId: string = process.env.INTRODUCTION_CHANNEL_ID!;
 client.on('ready', () => {
     let introductionMessage: string = "Hello, I'm a moving mokoko. Traveling merchants are divided into 3 groups.\n\n"
-    + "Group 1: Ben (Rethramis) | Peter (North Vern) | Laitir (Yorn)\n"
-    + "Group 2: Lucas (Yudia) | Morris (East Luterra) | Mac (Anikka) | Jeffery (Shushire) | Dorella (Feiton)\n"
-    + "Group 3: Malone (West Luterra) | Burt (East Luterra) | Oliver (Totoroyk) | Nox (Arthetine) | Aricer (Rohendel) | Rayni (Punika)\n\n"
+    + "**Group 1**: Ben (Rethramis) | Peter (North Vern) | Laitir (Yorn)\n"
+    + "**Group 2**: Lucas (Yudia) | Morris (East Luterra) | Mac (Anikka) | Jeffery (Shushire) | Dorella (Feiton)\n"
+    + "**Group 3**: Malone (West Luterra) | Burt (East Luterra) | Oliver (Totoroyk) | Nox (Arthetine) | Aricer (Rohendel) | Rayni (Punika)\n\n"
     + "If you are searching for the Seria card (Lostwind Cliff set), only Burt (group 3) has a chance of selling it.\n\n"
     + "React with :one: / :two: / :three: below and I will ping you when it is time for the respective group to spawn!";
     console.log("ready to go")
-    messageChannel = client.channels.cache.get(channelId) as Discord.TextChannel;
+    messageChannel = client.channels.cache.get(introductionChannelId) as Discord.TextChannel;
     messageChannel.send(introductionMessage);
 });
 
