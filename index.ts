@@ -48,43 +48,43 @@ function formattedMessage(systime: Date): string //should return string and job 
             {
                 messageString += "<@&" + roleGroup1 + "> Merchants: \n"
                 + "**[Ben (Rethramis)]**:\n"
-                + "Loghill - Loghill Outpost\nAnkumo Mountain - Border Watch\nRethramis Border - Regria Monastary\n"
+                + "> Loghill - Loghill Outpost\n>Ankumo Mountain - Border Watch\n> Rethramis Border - Regria Monastary\n"
                 + "**[Peter (North Vern)]**:\n"
-                + "Port Krona - Downtown Port Krona\nParna Forest - Parna's Sanctum\nFesnar Highland - Barrier Trail\nVernese Forest - Ranger HQ\nBalankar Mountains - Lighthouse Village\n"
+                + "> Port Krona - Downtown Port Krona\n> Parna Forest - Parna's Sanctum\n> Fesnar Highland - Barrier Trail\n> Vernese Forest - Ranger HQ\n> Balankar Mountains - Lighthouse Village\n"
                 + "**[Laitir (Yorn)]**:\n"
-                + "Yorn's Cradle - Glory Trade Plaza\nUnfinished Garden - Youthful Garden\nBlack Anvil Mine - Sleepy Shelter\nIron Hammer Mine - Radiant Gold Mine\nHall of Promise - Library Obscure\n"
+                + "> Yorn's Cradle - Glory Trade Plaza\n> Unfinished Garden - Youthful Garden\n> Black Anvil Mine - Sleepy Shelter\n> Iron Hammer Mine - Radiant Gold Mine\n> Hall of Promise - Library Obscure\n"
                 + "\n"
             }
             else if(value === "group2")
             {
                 messageString += "<@&" + roleGroup2 + "> Merchants: \n"
                 + "**[Lucas (Yudia)]**:\n"
-                + "Ozhorn Hill - Ozhorn Assembly Area\nSaland Hill- Salt Works\n"
+                + "> Ozhorn Hill - Ozhorn Assembly Area\n> Saland Hill- Salt Works\n"
                 + "**[Morris (East Luterra)]**:\n"
-                + "Dyorika Plains - Bishu Manor\nSunbright Hill - Pumpkin Farm\nFlowering Orchard - Deier Village\n"
+                + "> Dyorika Plains - Bishu Manor\nSunbright Hill - Pumpkin Farm\n> Flowering Orchard - Deier Village\n"
                 + "**[Mac (Anikka)]**:\n"
-                + "Delphi Township - Market District\nRattan Hill - Cold Haunted House\nMelody Forest - Ascetic Temple\nPrisma Valley - Beacon Point\nTwilight Mist - Cloud Valley\n"
+                + "> Delphi Township - Market District\n> Rattan Hill - Cold Haunted House\n> Melody Forest - Ascetic Temple\n> Prisma Valley - Beacon Point\nTwilight Mist - Cloud Valley\n"
                 + "**[Jeffrey (Shushire)]**:\n"
-                + "Icewing Cliff - Gray Wolves\nLake Eternity - Lakeside Fishing Spot\nFrozen Sea - Shadow Market\nIceblood Plateau - Graymoon Camp\nBitterwind Hill - Bitterwind Hill Post\n"
+                + "> Icewing Cliff - Gray Wolves\n> Lake Eternity - Lakeside Fishing Spot\n> Frozen Sea - Shadow Market\n> Iceblood Plateau - Graymoon Camp\nBitterwind Hill - Bitterwind Hill Post\n"
                 + "**[Dorella (Feiton)]**:\n"
-                + "Kalaja Village - Portal Statue\n"
+                + "> Kalaja Village - Portal Statue\n"
                 + "\n"
             }
             else if(value === "group3")
             {
                 messageString += "<@&" + roleGroup3 + "> Merchants: \n"
                 + "**[Malone (West Luterra)]**:\n"
-                + "Battlebound Plains - Front Outpost\nBilbrin Forest - Spring Refugee Outpost\nMedrick Monastary - Medrick Monastary\nLakebar- Lakebar Village\nMount Zagoras - Zagoras Fortress\n"
+                + "> Battlebound Plains - Front Outpost\n> Bilbrin Forest - Spring Refugee Outpost\n> Medrick Monastary - Medrick Monastary\nLakebar- Lakebar Village\n> Mount Zagoras - Zagoras Fortress\n"
                 + "**[Burt (East Luterra)]**:\n"
-                + "Blackrose Chapel - Styxia Village\nBorea's Domain - Borea Castle\nCroconys Seashore - Croconys Fishing Village\nLeyar Terrace - Tamir Village\n"
+                + "> Blackrose Chapel - Styxia Village\n> Borea's Domain - Borea Castle\n> Croconys Seashore - Croconys Fishing Village\n> Leyar Terrace - Tamir Village\n"
                 + "**[Oliver (Tortoyk)]**:\n"
-                + "Seaswept Woods - Cashew Forest\nSkyreach Steppe - Thumb Shores\nSweetwater Forest - Sweetwater Farm\nForest of Giants - Tortoyk's Arm\n"
+                + "> Seaswept Woods - Cashew Forest\n> Skyreach Steppe - Thumb Shores\n> Sweetwater Forest - Sweetwater Farm\n> Forest of Giants - Tortoyk's Arm\n"
                 + "**[Nox (Arthetine)]**:\n"
-                + "Riza Falls - Verdantier Observatory\nTotrich - Clockwork Square\nArid Path - Lupen Port\nScraplands - Relay Guard Post\nNebelhorn - Nebelhorn Lab\nWindbringer Hills - Guard Post\n"
+                + "> Riza Falls - Verdantier Observatory\n> Totrich - Clockwork Square\n> Arid Path - Lupen Port\n> Scraplands - Relay Guard Post\n> Nebelhorn - Nebelhorn Lab\n> Windbringer Hills - Guard Post\n"
                 + "**[Aricer (Rohendel)]**:\n"
-                + "Lake Shiverwave - Fairy Settlement\nXeneela Ruins - Contaminated Village\nBreezesome Brae - Dandelion Hill\nGlass Lotus Lake - Foehn Plains\nElzowin's Shade - West Knurlroot Forest\n"
+                + "> Lake Shiverwave - Fairy Settlement\n> Xeneela Ruins - Contaminated Village\n> Breezesome Brae - Dandelion Hill\n> Glass Lotus Lake - Foehn Plains\n> Elzowin's Shade - West Knurlroot Forest\n"
                 + "**[Rayni (Punika)]**:\n"
-                + "Tika Tika Colony - Militia Residence\nTideshelf Path - Mellow Beach\nSecret Forest - Forlorn Swamps\nStarsand Beach - Starlight Shelter\n"
+                + "> Tika Tika Colony - Militia Residence\n> Tideshelf Path - Mellow Beach\n> Secret Forest - Forlorn Swamps\n> Starsand Beach - Starlight Shelter\n"
                 + "\n"
             }
             //function fetchMerchantFromGroup: string = ""; //for now just group
@@ -154,7 +154,7 @@ client.on('ready', () => {
     let introductionMessage: string = "Hello, I'm a moving mokoko. Traveling merchants are divided into 3 groups.\n\n"
     + "**Group 1**: Ben (Rethramis) | Peter (North Vern) | Laitir (Yorn)\n"
     + "**Group 2**: Lucas (Yudia) | Morris (East Luterra) | Mac (Anikka) | Jeffery (Shushire) | Dorella (Feiton)\n"
-    + "**Group 3**: Malone (West Luterra) | Burt (East Luterra) | Oliver (Totoroyk) | Nox (Arthetine) | Aricer (Rohendel) | Rayni (Punika)\n\n"
+    + "**Group 3**: Malone (West Luterra) | Burt (East Luterra) | Oliver (Tortoyk) | Nox (Arthetine) | Aricer (Rohendel) | Rayni (Punika)\n\n"
     + "If you are searching for the Seria card (Lostwind Cliff set), only Burt (group 3) has a chance of selling it.\n\n"
     + "React with :one: / :two: / :three: below and I will ping you when it is time for the respective group to spawn!";
     console.log("ready to go")
