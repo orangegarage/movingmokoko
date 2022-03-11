@@ -74,7 +74,7 @@ function formattedMessage(systime: Date): string //should return string and job 
             {
                 messageString += "<@&" + roleGroup3 + "> Merchants: \n"
                 + "**[Malone (West Luterra)]**:\n"
-                + "> Battlebound Plains - Front Outpost\n> Bilbrin Forest - Spring Refugee Outpost\n> Medrick Monastary - Medrick Monastary\nLakebar- Lakebar Village\n> Mount Zagoras - Zagoras Fortress\n"
+                + "> Battlebound Plains - Front Outpost\n> Bilbrin Forest - Spring Refugee Outpost\n> Medrick Monastary - Medrick Monastary\n> Lakebar- Lakebar Village\n> Mount Zagoras - Zagoras Fortress\n"
                 + "**[Burt (East Luterra)]**:\n"
                 + "> Blackrose Chapel - Styxia Village\n> Borea's Domain - Borea Castle\n> Croconys Seashore - Croconys Fishing Village\n> Leyar Terrace - Tamir Village\n"
                 + "**[Oliver (Tortoyk)]**:\n"
