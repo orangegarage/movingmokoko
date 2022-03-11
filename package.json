@@ -7,7 +7,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "node build/index.js",
+    "start": "node index.js",
     "build": "tsc index.ts",
     "postinstall": "npm run build"
   },
