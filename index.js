@@ -43,7 +43,7 @@ function formattedMessage(systime) {
             if (value === "group1") {
                 messageString_1 += "<@&" + roleGroup1 + "> Merchants: \n"
                     + "**[Ben (Rethramis)]**:\n"
-                    + "> Loghill - Loghill Outpost\n>Ankumo Mountain - Border Watch\n> Rethramis Border - Regria Monastary\n"
+                    + "> Loghill - Loghill Outpost\n> Ankumo Mountain - Border Watch\n> Rethramis Border - Regria Monastary\n"
                     + "**[Peter (North Vern)]**:\n"
                     + "> Port Krona - Downtown Port Krona\n> Parna Forest - Parna's Sanctum\n> Fesnar Highland - Barrier Trail\n> Vernese Forest - Ranger HQ\n> Balankar Mountains - Lighthouse Village\n"
                     + "**[Laitir (Yorn)]**:\n"
@@ -55,11 +55,11 @@ function formattedMessage(systime) {
                     + "**[Lucas (Yudia)]**:\n"
                     + "> Ozhorn Hill - Ozhorn Assembly Area\n> Saland Hill- Salt Works\n"
                     + "**[Morris (East Luterra)]**:\n"
-                    + "> Dyorika Plains - Bishu Manor\nSunbright Hill - Pumpkin Farm\n> Flowering Orchard - Deier Village\n"
+                    + "> Dyorika Plains - Bishu Manor\n> Sunbright Hill - Pumpkin Farm\n> Flowering Orchard - Deier Village\n"
                     + "**[Mac (Anikka)]**:\n"
-                    + "> Delphi Township - Market District\n> Rattan Hill - Cold Haunted House\n> Melody Forest - Ascetic Temple\n> Prisma Valley - Beacon Point\nTwilight Mist - Cloud Valley\n"
+                    + "> Delphi Township - Market District\n> Rattan Hill - Cold Haunted House\n> Melody Forest - Ascetic Temple\n> Prisma Valley - Beacon Point\n> Twilight Mist - Cloud Valley\n"
                     + "**[Jeffrey (Shushire)]**:\n"
-                    + "> Icewing Cliff - Gray Wolves\n> Lake Eternity - Lakeside Fishing Spot\n> Frozen Sea - Shadow Market\n> Iceblood Plateau - Graymoon Camp\nBitterwind Hill - Bitterwind Hill Post\n"
+                    + "> Icewing Cliff - Gray Wolves\n> Lake Eternity - Lakeside Fishing Spot\n> Frozen Sea - Shadow Market\n> Iceblood Plateau - Graymoon Camp\n> Bitterwind Hill - Bitterwind Hill Post\n"
                     + "**[Dorella (Feiton)]**:\n"
                     + "> Kalaja Village - Portal Statue\n"
                     + "\n";
@@ -67,7 +67,7 @@ function formattedMessage(systime) {
             else if (value === "group3") {
                 messageString_1 += "<@&" + roleGroup3 + "> Merchants: \n"
                     + "**[Malone (West Luterra)]**:\n"
-                    + "> Battlebound Plains - Front Outpost\n> Bilbrin Forest - Spring Refugee Outpost\n> Medrick Monastary - Medrick Monastary\nLakebar- Lakebar Village\n> Mount Zagoras - Zagoras Fortress\n"
+                    + "> Battlebound Plains - Front Outpost\n> Bilbrin Forest - Spring Refugee Outpost\n> Medrick Monastary - Medrick Monastary\n> Lakebar- Lakebar Village\n> Mount Zagoras - Zagoras Fortress\n"
                     + "**[Burt (East Luterra)]**:\n"
                     + "> Blackrose Chapel - Styxia Village\n> Borea's Domain - Borea Castle\n> Croconys Seashore - Croconys Fishing Village\n> Leyar Terrace - Tamir Village\n"
                     + "**[Oliver (Tortoyk)]**:\n"
