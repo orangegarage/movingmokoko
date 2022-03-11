@@ -6,11 +6,6 @@
   },
   "description": "",
   "main": "index.ts",
-  "scripts": {
-    "start": "node index.js",
-    "build": "tsc index.ts",
-    "postinstall": "npm run build"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
