@@ -1,6 +1,9 @@
 {
   "name": "lostark-merchant-bot",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.14.0"
+  },
   "description": "",
   "main": "index.ts",
   "scripts": {
