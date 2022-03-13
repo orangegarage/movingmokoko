@@ -150,17 +150,17 @@ client.on('messageReactionRemove', (reaction, user) =>{
 
 
 let introductionChannelId: string = process.env.INTRODUCTION_CHANNEL_ID!;
-client.on('ready', () => {
-    let introductionMessage: string = "Hello, I'm a moving mokoko. Traveling merchants are divided into 3 groups.\n\n"
-    + "**Group 1**: Ben (Rethramis) | Peter (North Vern) | Laitir (Yorn)\n"
-    + "**Group 2**: Lucas (Yudia) | Morris (East Luterra) | Mac (Anikka) | Jeffery (Shushire) | Dorella (Feiton)\n"
-    + "**Group 3**: Malone (West Luterra) | Burt (East Luterra) | Oliver (Tortoyk) | Nox (Arthetine) | Aricer (Rohendel) | Rayni (Punika)\n\n"
-    + "If you are searching for the Seria card (Lostwind Cliff set), only Burt (group 3) has a chance of selling it.\n\n"
-    + "React with :one: / :two: / :three: below and I will ping you when it is time for the respective group to spawn!";
-    console.log("ready to go")
-    messageChannel = client.channels.cache.get(introductionChannelId) as Discord.TextChannel;
-    messageChannel.send(introductionMessage);
-});
+// client.on('ready', () => {
+//     let introductionMessage: string = "Hello, I'm a moving mokoko. Traveling merchants are divided into 3 groups.\n\n"
+//     + "**Group 1**: Ben (Rethramis) | Peter (North Vern) | Laitir (Yorn)\n"
+//     + "**Group 2**: Lucas (Yudia) | Morris (East Luterra) | Mac (Anikka) | Jeffery (Shushire) | Dorella (Feiton)\n"
+//     + "**Group 3**: Malone (West Luterra) | Burt (East Luterra) | Oliver (Tortoyk) | Nox (Arthetine) | Aricer (Rohendel) | Rayni (Punika)\n\n"
+//     + "If you are searching for the Seria card (Lostwind Cliff set), only Burt (group 3) has a chance of selling it.\n\n"
+//     + "React with :one: / :two: / :three: below and I will ping you when it is time for the respective group to spawn!";
+//     console.log("ready to go")
+//     messageChannel = client.channels.cache.get(introductionChannelId) as Discord.TextChannel;
+//     messageChannel.send(introductionMessage);
+// });
 
 client.on('messageCreate', msg => {
     if (msg.content === 'mokoko')
