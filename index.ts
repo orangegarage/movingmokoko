@@ -40,10 +40,11 @@ function formattedMessage(systime: Date): string //should return string and job 
     if(groupByTime.has(returnHour))
     {
         let messageString: string = "Naruni-powered merchant search!\n";
+        messageString += "Merchants online!\n"; //<@&role_id>
         console.log("what's the groups?: " + groupByTime.get(returnHour));
         let groupArray: Array<string> = groupByTime.get(returnHour)!;
         groupArray.forEach(function (value){
-            messageString += "Merchants online!\n" //<@&role_id>
+            
             if(value === "group1")
             {
                 messageString += "<@&" + roleGroup1 + "> Merchants: \n"

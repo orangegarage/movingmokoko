@@ -36,10 +36,10 @@ function formattedMessage(systime) {
     console.log("what's the hour?: " + returnHour);
     if (groupByTime.has(returnHour)) {
         var messageString_1 = "Naruni-powered merchant search!\n";
+        messageString_1 += "Merchants online!\n"; //<@&role_id>
         console.log("what's the groups?: " + groupByTime.get(returnHour));
         var groupArray = groupByTime.get(returnHour);
         groupArray.forEach(function (value) {
-            messageString_1 += "Merchants online!\n"; //<@&role_id>
             if (value === "group1") {
                 messageString_1 += "<@&" + roleGroup1 + "> Merchants: \n"
                     + "**[Ben (Rethramis)]**:\n"
